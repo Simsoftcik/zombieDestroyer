@@ -1,0 +1,139 @@
+html {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-image: url("images/board-bg.jpg");
+    background-size: 100%;
+    background-position-y:90%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1000;
+    /* cursor: url('images/aim.png') 20 20, auto;   */
+    cursor: none;
+}
+
+body {
+    margin: none;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+
+main {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+}
+
+a:hover{
+    color: #4f0101;
+}
+
+.zombie {
+    width: 200px;
+    height: 312px;
+    position: absolute;
+    background: url('images/walkingdead.png') 0 0;
+    animation: walkZombie 7s linear infinite, animateZombie 0.9s steps(10) infinite;
+    /* Use both animations in one selector */
+}
+
+.scoreDisplay {
+    color: azure;
+    font-size: 50px;
+    position: absolute;
+    top: 0px;
+    right: 70px;
+    z-index: 100;
+
+}
+
+#endGameDarkness {
+    width: 100%;
+    height: 100%;
+    position: fixed; /* Zmieniono na fixed, aby zajmować całe okno przeglądarki */
+    top: 0;
+    left: 0;
+    background-color: #4f0101; /* Zmieniono kolor tła na czarny */
+    opacity: 0.7; /* Dodano przezroczystość */
+    color: white; /* Zmieniono kolor tekstu na biały */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    display: none;
+}
+
+#endGame {
+    position: absolute;
+    width: 40%;
+    height: 300px;
+    background-color: white;
+    z-index: 1001;
+    left: 30%;
+    top: 180px;
+    background-image: url("/images/endgamescreen2.jpeg");
+    background-size: 110%;
+    overflow: hidden;
+    border-radius: 20px;
+    display: none;
+
+}
+
+#endGameText {
+    text-align: center;
+}
+
+#scoreSign {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+#scoreValue {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+#heartContainer {
+    display: flex;
+    height: auto;
+    width: 500px;
+}
+
+#aim {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    width: 150px;
+}
+
+@keyframes walkZombie {
+    0% {
+        right: -200px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes animateZombie {
+    to {
+        background-position: -2000px;
+    }
+}
