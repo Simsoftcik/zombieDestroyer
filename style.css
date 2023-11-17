@@ -85,7 +85,7 @@ a:hover{
     z-index: 1001;
     left: 30%;
     top: 180px;
-    background-image: url("/images/endgamescreen2.jpeg");
+    background-image: url("images/endgamescreen2.jpeg");
     background-size: 110%;
     overflow: hidden;
     border-radius: 20px;
